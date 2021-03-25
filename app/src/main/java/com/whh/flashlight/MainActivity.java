@@ -3,15 +3,12 @@ package com.whh.flashlight;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.content.pm.FeatureInfo;
-import android.content.pm.PackageManager;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextClock;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -56,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 manager.setTorchMode("0", true);
 
-                btn.setBackground(getResources().getDrawable(R.drawable.widget_toggle_on));
+                btn.setBackground(getResources().getDrawable(R.drawable.icon_toggle_on));
 
                 tv.setText(getString(R.string.current_open));
                 tv.setTextColor(getResources().getColor(R.color.current_open));
@@ -74,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 manager.setTorchMode("0", false);
 
-                btn.setBackground(getResources().getDrawable(R.drawable.widget_toggle_off));
+                btn.setBackground(getResources().getDrawable(R.drawable.icon_toggle_off));
 
                 tv.setText(getString(R.string.current_close));
                 tv.setTextColor(getResources().getColor(R.color.current_close));
